@@ -8,7 +8,7 @@ package retailstore;
  *
  * @author Corbin
  */
-public interface OutputStrategy {
+public interface DBStrategy {
     
-    public void printProductInfo();
+    public abstract Product getProductById(final String prodId);
 }

@@ -10,9 +10,14 @@ package retailstore;
  */
 public abstract class Reciept {
     private LineItem[] lineItem;
+    private Customer customer;
+    private double total;
     
-    
-    public void StartSale(){
+    public void Reciept(String custId){
          
+    }
+    
+    public double getTotalBDiscount(){
+        return total;
     }
 }

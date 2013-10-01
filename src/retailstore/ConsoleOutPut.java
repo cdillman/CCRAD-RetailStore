@@ -8,6 +8,17 @@ package retailstore;
  *
  * @author Corbin
  */
-public class ConsoleOutPut {
+public class ConsoleOutPut implements OutputStrategy{
+    private LineItem line;
+    
+    public void printProdInfo(){
+        System.out.println(line);
+    }
+
+    @Override
+    public void printProductInfo() {
+        System.out.println();
+    }
+    
     
 }

@@ -8,38 +8,39 @@ package retailstore;
  *
  * @author Corbin
  */
-public class Product {
-    private String productId;
+public class Product{
+    private String prodId;
     private String productName;
     private double price;
 
-    public Product(String productId, String productName, double price) {
-        this.productId = productId;
-        this.productName = productName;
-        this.price = price;
+        
+    public Product(String prodId, String productName, double price) {
+        setProdId(prodId);
+        setProductName(productName);
+        setPrice(price);
     }
 
-    public String getProductId() {
-        return productId;
+    public final String getProdId() {
+        return prodId;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public final void setProdId(final String productId) {
+        this.prodId = productId;
     }
 
-    public String getProductName() {
+    public final String getProductName() {
         return productName;
     }
 
-    public void setProductName(String productName) {
+    public final void setProductName(final String productName) {
         this.productName = productName;
     }
 
-    public double getPrice() {
+    public final double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public final void setPrice(final double price) {
         this.price = price;
     }
     

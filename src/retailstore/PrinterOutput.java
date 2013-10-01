@@ -8,6 +8,13 @@ package retailstore;
  *
  * @author Corbin
  */
-public class PrinterOutput {
+public class PrinterOutput implements OutputStrategy{
+    private Reciept receipt;
+       
     
+
+    @Override
+    public void printProductInfo() {
+        System.out.println(receipt);
+    }
 }

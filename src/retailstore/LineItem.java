@@ -8,15 +8,19 @@ package retailstore;
  *
  * @author Corbin
  */
-public abstract class LineItem extends Reciept{
+public class LineItem {
     private double quantity;
     private Product prod;
+    private DBStrategy db;
     private double itemTot;
 
-    public LineItem() {
-        this.quantity = quantity;
-        this.prod = prod;
-        this.itemTot = itemTot;
+    public void LineItem(String prodId, double quantity) {
+        this.prod = findProduct(prodId);
+        setQuantity(quantity);
+    }
+
+    private final Product findProduct(final String prodID){
+        return db.getProductById(prodID);
     }
 
     
@@ -44,7 +48,16 @@ public abstract class LineItem extends Reciept{
         this.itemTot = prod.getPrice() * quantity;
     }
     
-    
+    public static void main(String[] args) {
+      FakeDB db = new FakeDB();
+      LineItem line = new LineItem();
+      
+      line.LineItem("2", 3);
+      
+//      System.out.println(line.getProd().getProductName());
+      
+      
+    }
     
     
 }
